@@ -1,0 +1,52 @@
+#BlueJ class context
+comment0.target=OpenSimplex2S
+comment0.text=\r\n\ K.jpg's\ OpenSimplex\ 2,\ smooth\ variant\ ("SuperSimplex")\r\n\r\n\ More\ language\ ports,\ as\ well\ as\ legacy\ 2014\ OpenSimplex,\ can\ be\ found\ here\:\r\n\ https\://github.com/KdotJPG/OpenSimplex2\r\n
+comment1.params=seed\ x\ y
+comment1.target=float\ noise2(long,\ double,\ double)
+comment1.text=\r\n\ 2D\ OpenSimplex2S/SuperSimplex\ noise,\ standard\ lattice\ orientation.\r\n
+comment10.params=seed\ x\ y\ z\ w
+comment10.target=float\ noise4_ImproveXYZ(long,\ double,\ double,\ double,\ double)
+comment10.text=\r\n\ 4D\ SuperSimplex\ noise,\ with\ XYZ\ oriented\ like\ noise3_Fallback\r\n\ and\ W\ for\ an\ extra\ degree\ of\ freedom.\ W\ repeats\ eventually.\r\n\ Recommended\ for\ time-varied\ animations\ which\ texture\ a\ 3D\ object\ (W\=time)\r\n\ where\ there\ isn't\ a\ clear\ distinction\ between\ horizontal\ and\ vertical\r\n
+comment11.params=seed\ x\ y\ z\ w
+comment11.target=float\ noise4_ImproveXY_ImproveZW(long,\ double,\ double,\ double,\ double)
+comment11.text=\r\n\ 4D\ SuperSimplex\ noise,\ with\ XY\ and\ ZW\ forming\ orthogonal\ triangular-based\ planes.\r\n\ Recommended\ for\ 3D\ terrain,\ where\ X\ and\ Y\ (or\ Z\ and\ W)\ are\ horizontal.\r\n\ Recommended\ for\ noise(x,\ y,\ sin(time),\ cos(time))\ trick.\r\n
+comment12.params=seed\ x\ y\ z\ w
+comment12.target=float\ noise4_Fallback(long,\ double,\ double,\ double,\ double)
+comment12.text=\r\n\ 4D\ SuperSimplex\ noise,\ fallback\ lattice\ orientation.\r\n
+comment13.params=seed\ xs\ ys\ zs\ ws
+comment13.target=float\ noise4_UnskewedBase(long,\ double,\ double,\ double,\ double)
+comment13.text=\r\n\ 4D\ SuperSimplex\ noise\ base.\r\n\ Using\ ultra-simple\ 4x4x4x4\ lookup\ partitioning.\r\n\ This\ isn't\ as\ elegant\ or\ SIMD/GPU/etc.\ portable\ as\ other\ approaches,\r\n\ but\ it\ competes\ performance-wise\ with\ optimized\ 2014\ OpenSimplex.\r\n
+comment14.params=seed\ xsvp\ ysvp\ dx\ dy
+comment14.target=float\ grad(long,\ long,\ long,\ float,\ float)
+comment14.text=\r\n\ Utility\r\n
+comment15.params=seed\ xrvp\ yrvp\ zrvp\ dx\ dy\ dz
+comment15.target=float\ grad(long,\ long,\ long,\ long,\ float,\ float,\ float)
+comment16.params=seed\ xsvp\ ysvp\ zsvp\ wsvp\ dx\ dy\ dz\ dw
+comment16.target=float\ grad(long,\ long,\ long,\ long,\ long,\ float,\ float,\ float,\ float)
+comment17.params=x
+comment17.target=int\ fastFloor(double)
+comment2.params=seed\ x\ y
+comment2.target=float\ noise2_ImproveX(long,\ double,\ double)
+comment2.text=\r\n\ 2D\ OpenSimplex2S/SuperSimplex\ noise,\ with\ Y\ pointing\ down\ the\ main\ diagonal.\r\n\ Might\ be\ better\ for\ a\ 2D\ sandbox\ style\ game,\ where\ Y\ is\ vertical.\r\n\ Probably\ slightly\ less\ optimal\ for\ heightmaps\ or\ continent\ maps,\r\n\ unless\ your\ map\ is\ centered\ around\ an\ equator.\ It's\ a\ slight\r\n\ difference,\ but\ the\ option\ is\ here\ to\ make\ it\ easy.\r\n
+comment3.params=seed\ xs\ ys
+comment3.target=float\ noise2_UnskewedBase(long,\ double,\ double)
+comment3.text=\r\n\ 2D\ \ OpenSimplex2S/SuperSimplex\ noise\ base.\r\n
+comment4.params=seed\ x\ y\ z
+comment4.target=float\ noise3_ImproveXY(long,\ double,\ double,\ double)
+comment4.text=\r\n\ 3D\ OpenSimplex2S/SuperSimplex\ noise,\ with\ better\ visual\ isotropy\ in\ (X,\ Y).\r\n\ Recommended\ for\ 3D\ terrain\ and\ time-varied\ animations.\r\n\ The\ Z\ coordinate\ should\ always\ be\ the\ "different"\ coordinate\ in\ whatever\ your\ use\ case\ is.\r\n\ If\ Y\ is\ vertical\ in\ world\ coordinates,\ call\ noise3_ImproveXZ(x,\ z,\ Y)\ or\ use\ noise3_XZBeforeY.\r\n\ If\ Z\ is\ vertical\ in\ world\ coordinates,\ call\ noise3_ImproveXZ(x,\ y,\ Z).\r\n\ For\ a\ time\ varied\ animation,\ call\ noise3_ImproveXY(x,\ y,\ T).\r\n
+comment5.params=seed\ x\ y\ z
+comment5.target=float\ noise3_ImproveXZ(long,\ double,\ double,\ double)
+comment5.text=\r\n\ 3D\ OpenSimplex2S/SuperSimplex\ noise,\ with\ better\ visual\ isotropy\ in\ (X,\ Z).\r\n\ Recommended\ for\ 3D\ terrain\ and\ time-varied\ animations.\r\n\ The\ Y\ coordinate\ should\ always\ be\ the\ "different"\ coordinate\ in\ whatever\ your\ use\ case\ is.\r\n\ If\ Y\ is\ vertical\ in\ world\ coordinates,\ call\ noise3_ImproveXZ(x,\ Y,\ z).\r\n\ If\ Z\ is\ vertical\ in\ world\ coordinates,\ call\ noise3_ImproveXZ(x,\ Z,\ y)\ or\ use\ noise3_ImproveXY.\r\n\ For\ a\ time\ varied\ animation,\ call\ noise3_ImproveXZ(x,\ T,\ y)\ or\ use\ noise3_ImproveXY.\r\n
+comment6.params=seed\ x\ y\ z
+comment6.target=float\ noise3_Fallback(long,\ double,\ double,\ double)
+comment6.text=\r\n\ 3D\ OpenSimplex2S/SuperSimplex\ noise,\ fallback\ rotation\ option\r\n\ Use\ noise3_ImproveXY\ or\ noise3_ImproveXZ\ instead,\ wherever\ appropriate.\r\n\ They\ have\ less\ diagonal\ bias.\ This\ function's\ best\ use\ is\ as\ a\ fallback.\r\n
+comment7.params=seed\ xr\ yr\ zr
+comment7.target=float\ noise3_UnrotatedBase(long,\ double,\ double,\ double)
+comment7.text=\r\n\ Generate\ overlapping\ cubic\ lattices\ for\ 3D\ Re-oriented\ BCC\ noise.\r\n\ Lookup\ table\ implementation\ inspired\ by\ DigitalShadow.\r\n\ It\ was\ actually\ faster\ to\ narrow\ down\ the\ points\ in\ the\ loop\ itself,\r\n\ than\ to\ build\ up\ the\ index\ with\ enough\ info\ to\ isolate\ 8\ points.\r\n
+comment8.params=seed\ x\ y\ z\ w
+comment8.target=float\ noise4_ImproveXYZ_ImproveXY(long,\ double,\ double,\ double,\ double)
+comment8.text=\r\n\ 4D\ SuperSimplex\ noise,\ with\ XYZ\ oriented\ like\ noise3_ImproveXY\r\n\ and\ W\ for\ an\ extra\ degree\ of\ freedom.\ W\ repeats\ eventually.\r\n\ Recommended\ for\ time-varied\ animations\ which\ texture\ a\ 3D\ object\ (W\=time)\r\n\ in\ a\ space\ where\ Z\ is\ vertical\r\n
+comment9.params=seed\ x\ y\ z\ w
+comment9.target=float\ noise4_ImproveXYZ_ImproveXZ(long,\ double,\ double,\ double,\ double)
+comment9.text=\r\n\ 4D\ SuperSimplex\ noise,\ with\ XYZ\ oriented\ like\ noise3_ImproveXZ\r\n\ and\ W\ for\ an\ extra\ degree\ of\ freedom.\ W\ repeats\ eventually.\r\n\ Recommended\ for\ time-varied\ animations\ which\ texture\ a\ 3D\ object\ (W\=time)\r\n\ in\ a\ space\ where\ Y\ is\ vertical\r\n
+numComments=18

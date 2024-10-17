@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Cube
+comment1.params=x\ y\ z\ rotationX\ rotationY\ rotationZ\ material\ size
+comment1.target=Cube(double,\ double,\ double,\ double,\ double,\ double,\ Material,\ double)
+comment2.params=
+comment2.target=void\ act()
+numComments=3

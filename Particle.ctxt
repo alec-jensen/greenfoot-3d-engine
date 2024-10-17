@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Particle
+comment1.params=x\ y\ z\ velocity\ lifespan\ material
+comment1.target=Particle(double,\ double,\ double,\ Vec3,\ double,\ Material)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=ray
+comment3.target=Vec3\ getCollision(Ray)
+comment4.params=intersectionPoint
+comment4.target=Vec3\ getNormal(Vec3)
+comment5.params=intersectionPoint
+comment5.target=Vec3\ getUV(Vec3)
+numComments=6

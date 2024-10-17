@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Camera3D
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Camera3D\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=x\ y\ z\ rotationX\ rotationY\ rotationZ\ screenWidth\ screenHeight\ focalLength
+comment1.target=Camera3D(double,\ double,\ double,\ double,\ double,\ double,\ int,\ int,\ double)
+comment2.params=x\ y
+comment2.target=Ray\ generateRay(int,\ int)
+comment3.params=point
+comment3.target=boolean\ isVisible(Vec3)
+comment4.params=x\ y\ z
+comment4.target=boolean\ isVisible(double,\ double,\ double)
+numComments=5

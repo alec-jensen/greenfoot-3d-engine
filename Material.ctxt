@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Material
+comment1.params=color\ ambient\ diffuse\ specular\ shininess\ roughness
+comment1.target=Material(greenfoot.Color,\ double,\ double,\ double,\ double,\ double)
+comment2.params=u\ v
+comment2.target=greenfoot.Color\ getColor(double,\ double)
+numComments=3

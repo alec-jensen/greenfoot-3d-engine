@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=TiledTextureMaterial
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ TiledTextureMaterial\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=texture\ tileRatio\ ambient\ diffuse\ specular\ shininess\ roughness
+comment1.target=TiledTextureMaterial(greenfoot.GreenfootImage,\ double,\ double,\ double,\ double,\ double,\ double)
+comment2.params=u\ v
+comment2.target=greenfoot.Color\ getColor(double,\ double)
+numComments=3
